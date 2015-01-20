@@ -30,7 +30,7 @@ function ping_ponger() {
   var str2 = 'pong';
   go_to = prompt('How many points shall we play to?', 33);
 //  document.write(go_to);
-  document.write('<p><ul>')
+  document.write('<ul>')
   for (var i=0; i<100; i++){
     if (i % product === 0) {
       document.write('<li>' + str1 + str2 + '</li>')
@@ -45,7 +45,7 @@ function ping_ponger() {
       document.write('<li>' + i + '</li>')
     }
   }
-  document.write('</ul></p>')
+  document.write('</ul>')
 }
 
 ping_ponger()
