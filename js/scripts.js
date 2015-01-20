@@ -28,22 +28,24 @@ function ping_ponger() {
   var product = intr1 * intr2;
   var str1 = 'ping';
   var str2 = 'pong';
-  go_to = prompt('How many points shall we play to?', 100);
+  go_to = prompt('How many points shall we play to?', 33);
 //  document.write(go_to);
+  document.write('<p><ul>')
   for (var i=0; i<100; i++){
     if (i % product === 0) {
-      document.write('<p>' + str1 + str2 + '</p>')
+      document.write('<li>' + str1 + str2 + '</li>')
     } 
     else if (i % intr1 === 0){
-      document.write('<p>' + str1 + '</p>')
+      document.write('<li>' + str1 + '</li>')
     } 
     else if (i % intr2 === 0){
-      document.write('<p>' + str2 + '</p>')
+      document.write('<li>' + str2 + '</li>')
     } 
     else {
-      document.write('<p>' + i + '</p>')
+      document.write('<li>' + i + '</li>')
     }
   }
+  document.write('</ul></p>')
 }
 
 ping_ponger()
