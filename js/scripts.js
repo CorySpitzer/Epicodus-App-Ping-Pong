@@ -20,20 +20,25 @@
 
 
 function ping_ponger() { 
-//  alert("The function functioned!");
-//  console.log('hi')
-  var go_to;
+  //The Setup:
   var intr1 = 3; // Intervals
   var intr2 = 5;
-  var product = intr1 * intr2;
   var str1 = 'ping';
   var str2 = 'pong';
-  go_to = prompt('How many points shall we play to?', 33);
-//  document.write(go_to);
+  var go_to = prompt('How many points shall we play to?', 33);
+  var customize = confirm('Would like to customize the game?');
+  if (customize) {
+    intr1 = prompt('Enter the first interval:', intr1);
+    intr2 = prompt('Enter the second interval:', intr2);
+    str1 = prompt('Enter the first string:', str1);
+    str2 = prompt('Enter the second string:', str2);
+  }
+  var product = intr1 * intr2;
+  
   document.write('<ul>')
-  for (var i=0; i<100; i++){
+  for (var i=0; i<go_to; i++){
     if (i % product === 0) {
-      document.write('<li>' + str1 + str2 + '</li>')
+      document.write('<li>' + str1 + '-' + str2 + '</li>')
     } 
     else if (i % intr1 === 0){
       document.write('<li>' + str1 + '</li>')
